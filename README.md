@@ -1,6 +1,6 @@
 # ZS-UL
 CLI Zippyshare uploader written in Python.   
-Download from Zippyshare with [ZS-UL](https://github.com/Sorrow446/ZS-DL). 
+Download from Zippyshare with [ZS-DL](https://github.com/Sorrow446/ZS-DL). 
 
 **People have been seen selling my tools. DO NOT buy them. My tools are free and always will be.**
 
@@ -32,4 +32,3 @@ optional arguments:
                         Path of text file to write URLs to.
   -n, --no-wipe         Don't wipe output text file before writing to it.
   ```
-  
