@@ -1,5 +1,5 @@
 # ZS-UL
-CLI Zippyshare uploader written in Python. JS execution and BSoup-**FREE**.   
+CLI Zippyshare uploader written in Python.   
 
 **People have been seen selling my tools. DO NOT buy them. My tools are free and always will be.**
 
