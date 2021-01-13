@@ -33,7 +33,7 @@ optional arguments:
                         0.
   ```
 # Usage
-Upload all of the files in `E:\Linux ISOs` and `F:\More Linux ISOs`, then write the output to `G:\out.txt` with the default template.
+Upload all of the files in `E:\Linux ISOs` and `F:\More Linux ISOs`, then write the output to `G:\out.txt` with the default template.   
 `ZS-UL.py -p "E:\Linux ISOs" "F:\More Linux ISOs" -o G:\out.txt`
 
 G:\out.txt:
