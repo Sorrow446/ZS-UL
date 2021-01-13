@@ -4,6 +4,8 @@ CLI Zippyshare uploader written in Python.
 [Windows binaries](https://github.com/Sorrow446/ZS-UL/releases)    
 Download from Zippyshare with [ZS-DL](https://github.com/Sorrow446/ZS-DL).
 ![](https://i.imgur.com/r1t2wpe.png)
+![](https://i.imgur.com/OYCbn2p.png)
+Running on Linux.
 
 ```
  _____ _____     _____ __
