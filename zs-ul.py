@@ -70,7 +70,7 @@ def parse_prefs():
 		to_add.extend(walk_path(path))
 	if not to_add:
 		raise Exception('No files found in specified path(s).')
-	args.paths = to_add
+	args.paths = sorted(to_add)
 	return args
 
 def dir_setup():
