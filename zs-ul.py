@@ -89,7 +89,7 @@ def parse_template(meta):
 		return cfg.template.format(**meta)
 	except KeyError:
 		print("Failed to parse output template. Default one will be used instead.")
-		return "{filename}\n{file_url}\n".format(**meta)		
+		return "{file_path}\n{file_url}\n".format(**meta)		
 	
 def write_output(url, fname, path):
 	template = parse_template({
