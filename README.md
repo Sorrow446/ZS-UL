@@ -1,6 +1,6 @@
 # ZS-UL
 CLI Zippyshare uploader written in Python.   
-**People have been seen selling my tools. DO NOT buy them. My tools are free and always will be.**
+**People have been seen selling my tools. DO NOT buy them. My tools are free and always will be.**   
 [Windows binaries](https://github.com/Sorrow446/ZS-UL/releases)    
 Download from Zippyshare with [ZS-DL](https://github.com/Sorrow446/ZS-DL).
 ![](https://i.imgur.com/r1t2wpe.png)
