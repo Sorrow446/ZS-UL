@@ -1,18 +1,9 @@
 # ZS-UL
 CLI Zippyshare uploader written in Python.   
-[Windows binaries](https://github.com/Sorrow446/ZS-UL/releases)    
-Download from Zippyshare with [ZS-DL](https://github.com/Sorrow446/ZS-DL). 
-
 **People have been seen selling my tools. DO NOT buy them. My tools are free and always will be.**
-
-![](https://orion.feralhosting.com/sorrow/share/ZS-UL.png)
-
-# Usage
-Upload a single file with a HTTPS proxy and print URL to the console:    
-`ZS-UL.py -f G:\text_upload.webm -p 0.0.0.0:8080`
-
-Upload two files and write URLs to <script path>\out.txt:    
-`ZS-UL.py -f G:\text_upload.webm G:\text_upload_2.webm -o out.txt`
+[Windows binaries](https://github.com/Sorrow446/ZS-UL/releases)    
+Download from Zippyshare with [ZS-DL](https://github.com/Sorrow446/ZS-DL).
+![](https://i.imgur.com/r1t2wpe.png)
 
 ```
  _____ _____     _____ __
@@ -20,16 +11,43 @@ Upload two files and write URLs to <script path>\out.txt:
 |   __|__   |___|  |  |  |__
 |_____|_____|   |_____|_____|
 
-usage: ZS-UL.py [-h] -f FILES [FILES ...] [-pv] [-p PROXY] [-o OUTPUT] [-n]
+usage: zs-ul.py [-h] -p PATHS [PATHS ...] [--private] [--proxy PROXY]
+                [-o OUTPUT] [-w] [-t TEMPLATE] [-r {0,1,2,3,4,5}]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -f FILES [FILES ...], --files FILES [FILES ...]
-                        Paths of files to upload separated by a space.
-  -pv, --private        Set uploaded files to private.
-  -p PROXY, --proxy PROXY
-                        HTTPS only. <IP>:<port>.
+  -p PATHS [PATHS ...], --paths PATHS [PATHS ...]
+                        Paths to look in for files to upload. Files in
+                        subfolders will also be included.
+  --private             Set uploaded files to private.
+  --proxy PROXY         HTTPS only. <IP>:<port>.
   -o OUTPUT, --output OUTPUT
-                        Path of text file to write URLs to.
-  -n, --no-wipe         Don't wipe output text file before writing to it.
+                        Path of text file to write URLs to. Customizable with
+                        the template arg.
+  -w, --wipe            Wipe output text file before writing to it.
+  -t TEMPLATE, --template TEMPLATE
+                        Output text file template. Vars: file_url, filename,
+                        file_path.
+  -r {0,1,2,3,4,5}, --retries {0,1,2,3,4,5}
+                        How many times to re-attempt failed uploads. Default =
+                        0.
   ```
+# Usage
+Upload all of the files in `E:\Linux ISOs` and `F:\More Linux ISOs`, then write the output to `G:\out.txt` with the default template.
+`ZS-UL.py -p "E:\Linux ISOs" "F:\More Linux ISOs" -o G:\out.txt`
+
+G:\out.txt:
+```
+E:\Linux ISOs\test_upload.zip.001
+https://www18.zippyshare.com/v/HQcMt6r3/file.html
+E:\Linux ISOs\test_upload.zip.002
+https://www21.zippyshare.com/v/LXqPz2r9/file.html
+E:\Linux ISOs\New folder\test_upload.zip
+https://www21.zippyshare.com/v/EKoSe0p2/file.html
+F:\More Linux ISOs\test_upload.zip.001
+https://www15.zippyshare.com/v/IZcXt63m/file.html
+F:\More Linux ISOs\test_upload.zip.002
+https://www15.zippyshare.com/v/PPaKt72i/file.html
+```
+You can configure the output with the `-t` arg. `{file_path}\n{file_url}\n` was used here.
+ZS-UL will also include all files inside of subfolders (see the third path above).
