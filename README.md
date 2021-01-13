@@ -50,4 +50,5 @@ F:\More Linux ISOs\test_upload.zip.002
 https://www15.zippyshare.com/v/PPaKt72i/file.html
 ```
 You can configure the output with the `-t` arg. `{file_path}\n{file_url}\n` was used here.   
+If you do not specify an output, links will be printed to the console instead.   
 ZS-UL will also include all files inside of subfolders (see the third path above).
